@@ -62,7 +62,8 @@ class TableManager:
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     food_name TEXT NOT NULL,
                     amount INTEGER NOT NULL,
-                    price INTEGER NOT NULL
+                    price INTEGER NOT NULL,
+                    note TEXT
                 )"""
             )
             print(f"✅ Bill table for {table_name} created.")

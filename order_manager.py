@@ -37,10 +37,11 @@ class OrderManager:
 
             name, price = result
             try:
-                amount = int(input(f"How many '{name}'? "))
+                amount = int(input(f"How many '{name}': "))
+                note = input("Note anything: ")
                 self.db.execute(
-                    f"INSERT INTO {table} (food_name, amount, price) VALUES (?, ?, ?)",
-                    (name, amount, price),
+                    f"INSERT INTO {table} (food_name, amount, price, note) VALUES (?, ?, ?, ?)",
+                    (name, amount, price, note),
                 )
                 input(f"✅ Ordered {amount} x {name}. Press Enter to continue...")
             except ValueError:
@@ -80,4 +81,4 @@ class OrderManager:
             )
 
         print("-" * 50)
-        print(f"{'TOTAL':<26} {total_amount:<5} {'':<10} {total_price:<10,} VND")
+        print(f"{'TOTAL':<26} {total_amount:<5} {'':<10} {total_price:<10,}k VND")

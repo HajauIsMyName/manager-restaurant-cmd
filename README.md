@@ -18,7 +18,7 @@ restaurant/
 ├── data.db               # SQLite database file
 └── README.md             # Project documentation
 
-````
+```
 
 ---
 
@@ -27,10 +27,11 @@ restaurant/
 > 💡 Requires Python 3.8+ installed.
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/HajauIsMyName/manager-restaurant-cmd.git
 cd manager-restaurant-cmd
-````
+```
 
 ### 2. Run the app
 
@@ -44,26 +45,32 @@ python main.py
 
 ### Table: `tables`
 
-| Column   | Type    | Description                |
-| -------- | ------- | -------------------------- |
-| area     | TEXT    | Table area (e.g. C, B)     |
-| number   | TEXT    | Table number (e.g. 1, 2.1) |
-| status   | TEXT    | Current table status (or default is empty)      |
-| capacity | INTEGER | Number of seats            |
+| Column   | Type    | Description                                  |
+| -------- | ------- | -------------------------------------------- |
+| area     | TEXT    | Table area (e.g. C, B)                       |
+| number   | TEXT    | Table number (e.g. 1, 2.1)                   |
+| status   | TEXT    | Current table status (or default is "empty") |
+| capacity | INTEGER | Number of seats                              |
 
 ### Table: `menu`
 
-| Column      | Type    | Description          |
-| ----------- | ------- | -------------------- |
-| name        | TEXT    | Food name            |
-| price       | INTEGER | Price (e.g. 10k VND, 200k VND)          |
-| type        | TEXT    | Food category        |
-| description | TEXT    | Optional description |
+| Column      | Type    | Description                                     |
+| ----------- | ------- | ----------------------------------------------- |
+| name        | TEXT    | Food name                                       |
+| price       | INTEGER | Food price                                      |
+| type        | TEXT    | Category of the food (e.g., drink, main course) |
+| description | TEXT    | Optional description                            |
 
-> When a table is occupied, a new table (e.g., `B2`) is created to store its bill.
+### Table: table_number (Dynamic Table for Active Orders)
+
+| Column    | Type    | Description                    |
+| --------- | ------- | ------------------------------ |
+| food_name | TEXT    | Name of the ordered dish       |
+| amount    | INTEGER | Quantity of the dish ordered   |
+| price     | INTEGER | Price of the dish (unit price) |
+| note      | TEXT    | Optional description           |
 
 ---
-
 
 ## 🤝 Contributing
 
@@ -79,6 +86,6 @@ This project is licensed under the MIT License.
 
 ## ✉️ Contact
 
-* **Author:** Lâm Hậu
-* **Facebook:** [Lâm Hậu](https://www.facebook.com/hajauismyname/)
-* **GitHub:** [github.com/HajauIsMyName](https://github.com/HajauIsMyName)
+- **Author:** Lâm Hậu
+- **Facebook:** [Lâm Hậu](https://www.facebook.com/hajauismyname/)
+- **GitHub:** [github.com/HajauIsMyName](https://github.com/HajauIsMyName)
