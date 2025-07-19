@@ -11,13 +11,12 @@ A **command-line application** written in Python for managing restaurant operati
 ```
 restaurant/
 ├── main.py               # Entry point
-├── db\_handler.py         # SQLite database wrapper
-├── table\_manager.py      # Manages table status and bills
-├── order\_manager.py      # Order-taking & billing logic
+├── db_handler.py         # SQLite database wrapper
+├── table_manager.py      # Manages table status and bills
+├── order_manager.py      # Order-taking & billing logic
 ├── utils.py              # Helper functions (e.g., clear screen)
 ├── data.db               # SQLite database file
 └── README.md             # Project documentation
-
 ```
 
 ---
